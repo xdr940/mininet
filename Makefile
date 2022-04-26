@@ -56,8 +56,10 @@ install-mnexec: $(MNEXEC)
 install-manpages: $(MANPAGES)
 	install -D -t $(MANDIR) $(MANPAGES)
 
-install: install-mnexec install-manpages
+install: install-mnexec install-python install-manpages 
+	echo "ok"
 #	This seems to work on all pip versions
+install-python:
 	$(PYTHON) -m pip uninstall -y mininet || true
 	$(PYTHON) -m pip install .
 
