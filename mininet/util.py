@@ -697,3 +697,7 @@ def waitListening( client=None, server='127.0.0.1', port=80, timeout=None ):
         time += .5
         result = runCmd( cmd )
     return True
+
+def roit():
+    info("at roit info\n")
+    print("at roit function")
